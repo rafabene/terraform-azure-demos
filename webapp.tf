@@ -21,7 +21,7 @@ resource "azurerm_linux_web_app" "example" {
     }
 
     app_settings = {
-      "QUARKUS_MONGODB_CONNECTION_STRING" = "mongodb://benevidesmongodb:RCQj8FLv7fTt1ylIi65QUAgRLBb2EASk03HR9x2WtKgBNlKnI8HncU3QIBdeA0Zi5tD23GdrkTEAACDb1U3Tug==@benevidesmongodb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@benevidesmongodb@"
+      "QUARKUS_MONGODB_CONNECTION_STRING" = "mongodb://<Connection String>"
       "PORT" = 8080
     }
 
