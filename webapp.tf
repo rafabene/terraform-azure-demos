@@ -21,7 +21,6 @@ resource "azurerm_linux_web_app" "example" {
     }
 
     app_settings = {
-      "QUARKUS_MONGODB_CONNECTION_STRING" = "mongodb://<Connection String>"
       "PORT" = 8080
     }
 
