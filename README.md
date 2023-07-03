@@ -1,11 +1,35 @@
-# Terraform scripts for Azure
+# APIM Features demo (Work in Progress)
 
-This is a set of [Terraform](https://www.terraform.io/) files to create a test environment for Rafael Benevides
+This project demonstrate the following features of APIM
 
-It uses version 3.45.0 of [azurerm provider](https://registry.terraform.io/providers/hashicorp/azurerm/3.5.0/docs) and at this moment the following resources will be created
+- Import REST API
+- Import SOAP API
+- Convert SOAP to REST
+- Authentication
+- Cache
+- ...
 
-- A resource group
-- A Java Web App instance for the [Contacts REST API](https://github.com/rafabene/contacts-rest-api-mongodb) project
-- A CosmosDB/MongoDB instance to store contacts
-- A Spring Apps to deploy the [Spring SOAP API](https://github.com/rafabene/spring-soap-api) project
-- A API Management to connect to use SOAP and REST APIs
+The project [terraform-azure-demos](./terraform-azure-demos/) creates the following resources accoding to the diagram bellow.
+
+![](./diagram.png "Demos diagram")
+
+- A resource group called "demos"
+
+- A Spring Cloud Service called "myspringapps"
+- A Spring Cloud App called "countrywebservice"
+- A Spring Cloud Java deployment called "default"
+- An App Service Plan called "benevidesappsvcplan"
+- A Linux Java Web App called "benevidescontactsapi"
+- A CosmosDB account called "benevidesmongodb"
+- A CosmosDB database called "contacts"
+- A CosmosDB collection called "contacts"
+- An API Management instance called "demo-apim"
+
+## How to use it?
+
+1. Checkout this project 
+2. Go to the folder [terraform-azure-demos](./terraform-azure-demos/) and run the following command to create the resource above:
+
+        terraform init
+        terraform apply
+
